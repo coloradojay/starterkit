@@ -48,7 +48,6 @@ The initial api endpoint is `/api`.
 | /api/users/:user_id | PUT       | Update a user with new info |
 | /api/users/:user_id | DELETE    | Delete a user           	|
 
-
 ## Goals
  - Testing, Testing, Testing
  - CRUD for User model
