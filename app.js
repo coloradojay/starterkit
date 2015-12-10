@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // WE ♥ JS
 
 var express = require('express'),
     path = require('path'),

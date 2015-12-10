@@ -1,6 +1,5 @@
 ## MEAN Stack Starter Kit
 
-WE ♥ JS
 I am working my way through learning MEAN Stack and coming from a Rails background, thought it made sense to create a base starting point for launching
 new projects. This is a work in progress!!!
 
