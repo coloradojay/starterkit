@@ -26,11 +26,12 @@ $ npm install
 
 If running mongo locally, ensure it's running before starting the server!
 
-Starting the server, 
+To start the server from the root of the project in a terminal:
 ```sh
 $ npm start
 ```
-from the root of the project in a terminal, or if you are using nodemon (`https://www.npmjs.com/package/nodemon`)
+
+Or if you are using nodemon (`https://www.npmjs.com/package/nodemon`) *HINT* *HINT*
 ```sh
 $ nodemon
 ```
