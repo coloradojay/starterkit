@@ -1,0 +1,1 @@
+angular.module('starterKit', ['ngRoute', 'appRoutes', 'MainCtrl', 'UserCtrl', 'UserService']);
