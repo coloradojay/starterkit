@@ -17,15 +17,10 @@ This will install bower globally to help with all of the angular dependencies.
 Within the `.bowerrc` file, we point the dependencies to be installed in the `public/lib` directory (Change to match your project, if needed/wanted). 
 Additionally, within `bower.json`, we specify which dependencies are to be installed (Change to match your project). 
 
+Install all of the node modules needed.
 ```sh
 $ npm install
 ```
-Install all of the node modules needed.
-
-```sh
-$ eslint --init
-```
-Let's install eslint (`http://eslint.org/`) to help maintain code quality standards.
 
 `config/env.js` will hold the connection url for the mongodb instance. If you are running locally, nothing to change here but the name of the db to be used.
 
