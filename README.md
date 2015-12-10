@@ -42,7 +42,15 @@ $ nodemon
 
 ## API Reference
 
-The initial api endpoint is `/api`. Once users have been created, `/api/users` will return all users.
+The initial api endpoint is `/api`.
+
+| Routes   	          | HTTP Verb | Description  	            |
+|---	              |---	      |---	                        |
+| /api/users  	      | GET  	  | Get all the users  	        |
+| /api/users  	      | POST  	  | Create a new user           |
+| /api/users/:user_id | GET       | Get a single user  	        |
+| /api/users/:user_id | PUT       | Update a user with new info |
+| /api/users/:user_id | DELETE    | Delete a user           	|
 
 
 ## Goals
