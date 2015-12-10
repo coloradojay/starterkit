@@ -52,7 +52,7 @@ The initial api endpoint is `/api`. Once users have been created, `/api/users` w
  - JSON Web Token authentication for routes
  - User Login system
 
-## License
+License
 ----
 
 MIT
