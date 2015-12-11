@@ -7,7 +7,8 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    jwt = require('jsonwebtoken'),
+    passport = require('passport'),
+    flash = require('connect-flash'),
     env = require('./config/env');
 
 var routes = require('./routes/index');
@@ -17,8 +18,8 @@ var api = require('./routes/api');
 mongoose.connect(env.database);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function(err, db){
-    if(err) {
+db.once('open', function (err, db) {
+    if (err) {
         throw err;
     }
     else {
@@ -42,11 +43,20 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// required for passport
+// session secret
+app.set('secret', env.secret);
+app.use(passport.initialize());
+// persistent login sessions
+app.use(passport.session());
+// use connect-flash for flash messages stored in session
+app.use(flash());
+
 app.use('/', routes);
 app.use('/api', api);
 
-app.get('*', function(req, res){
-   res.sendFile('./public/index.html');
+app.get('*', function (req, res) {
+    res.sendFile('./public/index.html');
 });
 
 // catch 404 and forward to error handler
